@@ -1,0 +1,34 @@
+﻿<Window x:Class="TidRapporteringSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TidRapporteringSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Tids Rapportering Program" FontSize="20" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></Label>
+        <TextBox Name="jobbDescription" Grid.Column="2" HorizontalAlignment="Left" Margin="20,23,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Skriv här vad har du jobbat med" VerticalAlignment="Top" Width="417" Height="47"/>
+        <Label Grid.Column="2" Content="Select datum:" HorizontalAlignment="Left" Margin="20,94,0,0" Grid.Row="2" VerticalAlignment="Top" Width="133" Height="30"/>
+        <Label Grid.Column="2" Content="Select tid:" HorizontalAlignment="Left" Margin="20,138,0,0" Grid.Row="2" VerticalAlignment="Top" Width="133" Height="30"/>
+        <DatePicker Name="datum" Grid.Column="2" HorizontalAlignment="Left" Margin="228,94,0,0" Grid.Row="2" VerticalAlignment="Top" Width="208" Height="30"/>
+        <ComboBox Name="timesBox" Grid.Column="2" HorizontalAlignment="Left" Margin="229,137,0,0" Grid.Row="2" VerticalAlignment="Top" Width="207" Height="30"/>
+        <Button Name="sparaBtn" Grid.Column="2" Content="Spara" HorizontalAlignment="Left"  Margin="229,188,0,0" Grid.Row="2" VerticalAlignment="Top" Width="207" Height="30" Click="sparaBtn_Click"/>
+        <ListBox Name="raportlistBox" Grid.Column="1" Grid.Row="2" Margin="0,23,0,44" />
+        <Button Grid.Column="2" Content="Lista med all tidsrapporter" HorizontalAlignment="Left" Margin="230,247,0,0" Grid.Row="2" VerticalAlignment="Top" Width="207" Height="30" Click="Button_Click"/>
+        <Label Grid.Column="2" Content="Bara för manager:" HorizontalAlignment="Left" Margin="20,251,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.6,0.281" Width="115"/>
+    </Grid>
+
+</Window>
